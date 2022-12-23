@@ -7,39 +7,20 @@ from PyQt6.QtCore import *
 import sys
 
 
-# create a Window class
 
 
 class Window(QMainWindow):
-    # constructor
+    
     def __init__(self):
-        super().__init__()
-
-        # setting title
-        self.setWindowTitle("Python ")
-
-        # setting geometry
+        super().__init__()   
+        self.setWindowTitle("Python ")   
         self.setGeometry(100, 100, 300, 500)
-
-        # calling method
-        self.UiComponents()
-
-        # showing all the widgets
-        self.show()
-
-    # method for components
-    def UiComponents(self):
-
-        # turn
-        self.turn = 0
-
-        # times
-        self.times = 0
-
-        # creating a push button list
-        self.push_list = []
-
-        # creating 2d list
+        self.UiComponents()       
+        self.show()    
+    def UiComponents(self):      
+        self.turn = 0        
+        self.times = 0        
+        self.push_list = []        
         for _ in range(3):
             temp = []
             for _ in range(3):
@@ -61,10 +42,10 @@ class Window(QMainWindow):
 
         self.label = QLabel(self)
 
-        # setting geometry to the label
+       
         self.label.setGeometry(20, 300, 260, 60)
 
-        # setting style sheet to the label
+        
         self.label.setStyleSheet("QLabel"
                                  "{"
                                  "border : 3px solid black;"
